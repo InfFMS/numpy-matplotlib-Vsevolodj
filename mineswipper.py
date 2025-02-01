@@ -6,4 +6,19 @@
 # Визуализируйте:
 # Само поле (где мины выделены красным).
 # Поле с числами, где указано количество мин вокруг каждой клетки (для наглядности).
-#
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, ax = plt.subplots()
+
+data = np.array
+print(data)
+# Построение поля
+plt.imshow(data, cmap='hot')
+
+plt.xticks(range(8), labels=s)
+plt.yticks(range(8), labels=[f"{i}" for i in range(8, 0, -1)])
+plt.title("Шахматная доска")
+
+circle = plt.Circle((x, y), 0.4, color= "red", label="ФЕРЗЬ")
+ax.add_patch(circle)

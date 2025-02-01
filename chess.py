@@ -19,11 +19,11 @@ data = np.array([[1, 0, 1, 0, 1, 0, 1, 0], [0, 1, 0, 1, 0, 1, 0, 1], [1, 0, 1, 0
 print(data)
 # Построение поля
 plt.imshow(data, cmap='hot')
-
+# подпись осей
 plt.xticks(range(8), labels=s)
 plt.yticks(range(8), labels=[f"{i}" for i in range(8, 0, -1)])
 plt.title("Шахматная доска")
-
+#создали ферзя
 circle = plt.Circle((x, y), 0.4, color= "red", label="ФЕРЗЬ")
 ax.add_patch(circle)
 
@@ -84,10 +84,7 @@ circle_an6y = plt.Circle((x, y-6), 0.1, color= "green")
 ax.add_patch(circle_an6y)
 circle_an7y = plt.Circle((x, y-7), 0.1, color= "green")
 ax.add_patch(circle_an7y)
-
 # ---------------------------------------------------------
-
-
 circle_1d = plt.Circle((x+1, y+1), 0.1, color= "green")
 ax.add_patch(circle_1d)
 circle_2d = plt.Circle((x+2, y+2), 0.1, color= "green")
@@ -146,14 +143,5 @@ ax.add_patch(circle_an6yd)
 circle_an7yd = plt.Circle((x+7, y-7), 0.1, color= "green")
 ax.add_patch(circle_an7yd)
 
-
-
-
-# ax.set_xlim(0, 1)
-# ax.set_ylim(0, 1)
 plt.legend(loc=(1, 1))
-
-
-
-
 plt.show()
