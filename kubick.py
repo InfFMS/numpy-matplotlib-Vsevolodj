@@ -31,4 +31,6 @@ print(max)
 categories = ["1", "2", "3", "4", "5", "6"]
 plt.bar(categories, value, color='green')
 plt.title("Столбчатая диаграмма")
+ax.set_xlabel("Выпавшее число", fontsize=10, color='black', labelpad=0)    # +
+ax.set_ylabel("Количество выпадений", fontsize=10, color='black', labelpad=0)  # +
 plt.show()
