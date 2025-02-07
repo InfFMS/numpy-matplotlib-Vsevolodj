@@ -25,16 +25,15 @@ while t<=100:
         p.append(x)
         t+=1
     o=1
-print(p)
 t=0
 index_nomber=0
-otsartirovka=[0]*100
+minefield=[0]*100
 for i in data:
     pon=p[index_nomber]
     t=data[index_nomber]
-    otsartirovka[pon]=t
+    minefield[pon]=t
     index_nomber=index_nomber+1
-print(otsartirovka)
+print(minefield)
 
 # data = np.random.shuffle(data)
 # print(data)
