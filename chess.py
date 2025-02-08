@@ -58,5 +58,6 @@ for i in range(0,8,1):
 #создали ферзя
 circle = plt.Circle((x, y), 0.4, color= "red", label="ФЕРЗЬ")
 ax.add_patch(circle)
+
 plt.legend(loc=(1, 1))
 plt.show()
