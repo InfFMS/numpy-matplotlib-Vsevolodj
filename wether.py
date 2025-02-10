@@ -65,6 +65,5 @@ axs[1].set_xlabel("Temperature, °C", fontsize=10, color='black', labelpad=0)
 text_stats = (f'54345')
 plt.text(-2,100,f'Средняя температура:{round(average_temp)}°C\nДней с температурой больше 25°C: {warm_days} дней\n'
                 f'Cамая длинная последовательность, \nкогда температура была ниже 0°C: {max} days')
-
-plt.tight_layout()
+plt.subplots_adjust( top=0.5)
 plt.show()
