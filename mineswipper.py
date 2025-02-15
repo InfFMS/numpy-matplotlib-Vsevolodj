@@ -33,16 +33,25 @@ for i in data:
     t=data[index_nomber]
     minefield[pon]=t
     index_nomber=index_nomber+1
+# print(minefield)
+line_minefield = minefield
+minefield = np.array(minefield)
+minefield =minefield.reshape((10,10))
 print(minefield)
+plt.imshow(minefield, cmap='Set1')
+plt.title("Mineswipper")
 
-# data = np.random.shuffle(data)
-# print(data)
+ax.text(0, 0, '1', color ="orange", horizontalalignment='center', verticalalignment='center', size = 20)
 
-# plt.imshow(data, cmap='hot')
-#
-# plt.xticks(range(8), labels=s)
-# plt.yticks(range(8), labels=[f"{i}" for i in range(8, 0, -1)])
-# plt.title("Шахматная доска")
-#
-# circle = plt.Circle((x, y), 0.4, color= "red", label="ФЕРЗЬ")
-# ax.add_patch(circle)
+ax.text(9, 9, '1', color ="orange", horizontalalignment='center', verticalalignment='center', size = 20)
+
+for i in range(10,89):
+    if not(i%10==0 or i%10==9):
+        count = 0
+        count = minefield[i%10+1,i//10]+line_minefield[i-10-1]+line_minefield[i-10+1]+line_minefield[i-1]+line_minefield[i+1]+line_minefield[i+10]+line_minefield[i+10-1]+line_minefield[i+10+1]
+        ax.text(i%10, i//10, count*-1, color="orange", horizontalalignment='center', verticalalignment='center', size=20)
+ax.set_axis_off()
+# plt.xlim(0,5)
+# plt.ylim(15,-5)
+plt.legend(loc=(1, 1))
+plt.show()
